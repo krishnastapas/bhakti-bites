@@ -1,11 +1,14 @@
+"use client";
+import Image from "next/image";
+
 const products = [
   { id: 1, name: "Atta Gur Cookies (250g)", price: 100, originalPrice: 120, img: "/images/cookies1.png" },
   { id: 2, name: "Atta Gur Cookies (150g)", price: 70, originalPrice: 90, img: "/images/cookies2.png" },
-  // { id: 2, name: "Balusai", price: 199, originalPrice: 399, img: "/images/img2.png" },
-  // { id: 3, name: "Khaja", price: 349, originalPrice: 499, img: "/images/img3.png" },
-  // { id: 4, name: "3 in 1 prasad", price: 349, originalPrice: 499, img: "/images/mix1.png" },
-  // { id: 5, name: "4 in 1 prasad", price: 349, originalPrice: 499, img: "/images/mix2.png" },
-  // { id: 6, name: " in 1 prasad", price: 349, originalPrice: 499, img: "/images/mix3.png" },
+  // { id: 3, name: "Balusai", price: 199, originalPrice: 399, img: "/images/img2.png" },
+  // { id: 4, name: "Khaja", price: 349, originalPrice: 499, img: "/images/img3.png" },
+  // { id: 5, name: "3 in 1 prasad", price: 349, originalPrice: 499, img: "/images/mix1.png" },
+  // { id: 6, name: "4 in 1 prasad", price: 349, originalPrice: 499, img: "/images/mix2.png" },
+  // { id: 7, name: "5 in 1 prasad", price: 349, originalPrice: 499, img: "/images/mix3.png" },
 ];
 
 export default function ProductGrid() {
@@ -22,11 +25,13 @@ export default function ProductGrid() {
             className="border-2 border-[#4B1F1F] rounded-2xl overflow-hidden bg-[#F7F5E9] flex flex-col"
           >
             {/* Image with Sale Badge */}
-            <div className="relative">
-              <img
+            <div className="relative w-full h-80">
+              <Image
                 src={p.img}
                 alt={p.name}
-                className="w-full h-80 object-cover"
+                fill
+                className="object-cover"
+                priority
               />
               <span className="absolute bottom-3 left-3 bg-[#6A1F33] text-white text-sm px-3 py-1 rounded-full">
                 Sale
@@ -39,7 +44,6 @@ export default function ProductGrid() {
                 {p.name}
               </h3>
 
-
               {/* Price */}
               <div className="mt-2 flex items-center space-x-3">
                 <span className="text-gray-400 line-through text-base">
@@ -50,7 +54,7 @@ export default function ProductGrid() {
                 </span>
               </div>
 
-              {/* Add to Cart Button */}
+              {/* Order Now Button */}
               <button className="mt-5 w-full border-2 border-[#4B1F1F] text-[#4B1F1F] py-3 rounded-full font-medium hover:bg-[#4B1F1F] hover:text-white transition-all">
                 Order Now
               </button>

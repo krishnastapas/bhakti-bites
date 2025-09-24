@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -9,26 +10,24 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between items-center px-8 py-4 shadow bg-white sticky top-0 z-50">
       {/* Logo */}
-      <a href="/" className="flex items-center space-x-2">
+      <Link href="/" className="flex items-center space-x-2">
         <Image
-          src="/images/logo.png" // <-- put your logo file in public/images/
+          src="/images/logo.png"
           alt="Bhakti Bites Logo"
-          width={200} // adjust size
-          height={200}
+          width={150}
+          height={150}
           className="object-contain"
         />
-        {/* <span className="text-xl font-bold text-orange-700 hidden sm:block">
-          Bhakti Bites
-        </span> */}
-      </a>
+        
+      </Link>
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
-        <li><a href="#">Home</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#values">Our Values</a></li>
-        <li><a href="#story">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><Link href="#">Home</Link></li>
+        <li><Link href="#products">Products</Link></li>
+        <li><Link href="#values">Our Values</Link></li>
+        <li><Link href="#story">About</Link></li>
+        <li><Link href="#contact">Contact</Link></li>
       </ul>
 
       {/* Mobile Menu Button */}
@@ -43,11 +42,11 @@ export default function Navbar() {
       {open && (
         <div className="absolute top-full left-0 w-full bg-white shadow-md md:hidden">
           <ul className="flex flex-col space-y-4 p-6 text-gray-700 font-medium">
-            <li><a href="#" onClick={() => setOpen(false)}>Home</a></li>
-            <li><a href="#products" onClick={() => setOpen(false)}>Products</a></li>
-            <li><a href="#values" onClick={() => setOpen(false)}>Our Values</a></li>
-            <li><a href="#story" onClick={() => setOpen(false)}>About</a></li>
-            <li><a href="#contact" onClick={() => setOpen(false)}>Contact</a></li>
+            <li><Link href="#" onClick={() => setOpen(false)}>Home</Link></li>
+            <li><Link href="#products" onClick={() => setOpen(false)}>Products</Link></li>
+            <li><Link href="#values" onClick={() => setOpen(false)}>Our Values</Link></li>
+            <li><Link href="#story" onClick={() => setOpen(false)}>About</Link></li>
+            <li><Link href="#contact" onClick={() => setOpen(false)}>Contact</Link></li>
           </ul>
         </div>
       )}
