@@ -2,8 +2,8 @@
 import Image from "next/image";
 
 const products = [
-  { id: 1, name: "Atta Gur Cookies (250g)", price: 100, originalPrice: 120, img: "/images/cookies1.png" },
-  { id: 2, name: "Atta Gur Cookies (150g)", price: 70, originalPrice: 90, img: "/images/cookies2.png" },
+  { id: 1, name: "Atta Gur Cookies (250g)", price: 100, originalPrice: 120, img: "/images/cookies4.png" },
+  { id: 2, name: "Atta Gur Cookies (150g)", price: 70, originalPrice: 90, img: "/images/cookies3.png" },
   // { id: 3, name: "Balusai", price: 199, originalPrice: 399, img: "/images/img2.png" },
   // { id: 4, name: "Khaja", price: 349, originalPrice: 499, img: "/images/img3.png" },
   // { id: 5, name: "3 in 1 prasad", price: 349, originalPrice: 499, img: "/images/mix1.png" },

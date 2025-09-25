@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const slides = [
-  { img: "/images/cookiesBanner.png" },
-  // { img: "/images/nimki.jpg" },
+  { img: "/images/banner1.png" },
+  // { img: "/images/cookiesBanner.png" },
 ];
 
 export default function HeroSlider() {
